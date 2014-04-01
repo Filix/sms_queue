@@ -12,19 +12,25 @@ class BWService implements ServiceInterface{
 
     protected $url = 'http://service2.hbsmservice.com:8080/sms_send2.do';
     
-    protected $corp_id = '2e3p004';
+    protected $corp_id;
     
-    protected $corp_pwd = '2e3p004';
+    protected $corp_pwd;
     
-    protected $corp_service = '10690269yd';
+    protected $corp_service;
     
     protected $log;
     
-    public function __construct()
+    public function __construct($corp_id, $corp_pwd, $corp_service)
     {
+        $this->corp_id = $corp_id;
+        $this->corp_pwd = $corp_pwd;
+        $this->corp_service = $corp_service;
         $this->log = new CsvLog();
     }
 
+    /*
+     * todo
+     */
     public function enable()
     {
         return true;

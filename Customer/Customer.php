@@ -21,7 +21,7 @@ abstract class Customer {
      */
     protected $service;
 
-    public function __construct(QueueInterface $queue, ServiceInterface $service)
+    public function __construct(ServiceInterface $service, QueueInterface $queue)
     {
         $this->queue = $queue;
         $this->service = $service;

@@ -11,21 +11,25 @@ class MDService implements ServiceInterface {
 
     protected $url = 'http://sdk2.zucp.net:8060/webservice.asmx/mt';
     
-    protected $sn = 'SDK-BBX-010-20020';
+//    protected $sn = 'SDK-BBX-010-20020';
     
-    protected $password = 'f57A403-';
+//    protected $password = 'f57A403-';
     
     protected $pwd;
 
-    public function __construct()
+    public function __construct($sn, $password)
     {
+        $this->sn = $sn;
+        $this->password = $password;
         $this->pwd = strtoupper(md5($this->sn . $this->password));
     }
 
+    /*
+     * todo
+     */
     public function enable()
     {
         return true;
-        ;
     }
 
     /*

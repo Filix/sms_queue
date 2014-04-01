@@ -13,9 +13,9 @@ class PrimaryCustomer extends Customer {
     
     protected$secondaryQueue;
     
-    public function __construct(QueueInterface $primaryQueue, ServiceInterface $service, QueueInterface $secondaryQueue)
+    public function __construct(ServiceInterface $service, QueueInterface $primaryQueue,  QueueInterface $secondaryQueue)
     {
-        parent::__construct($primaryQueue, $service);
+        parent::__construct($service, $primaryQueue);
         
         $this->secondaryQueue = $secondaryQueue;
     }
