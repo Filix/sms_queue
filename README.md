@@ -65,3 +65,13 @@ while(1){
     sleep(1);
 }
 ```
+
+##自定义
+
+###自定义queue
+
+实现Filix\Queue\QueueInterface接口即可，如实现自己的Mysql队列、RabbitMQ队列等。
+
+###自定义第三方短信服务商
+
+实现Filix\SmsService\ServiceInterface接口即可。
