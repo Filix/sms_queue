@@ -1,0 +1,29 @@
+{
+    "name": "filix/sms_queue",
+    "description": "Send SMS with Queue",
+    "keywords": ["sms", "queue"],
+    "homepage": "https://github.com/Filix/sms_queue/",
+    "license": "MIT",
+    "authors": [{
+        "name": "Filix",
+        "email": "syp.syl@gmail.com"
+    }],
+    "support": {
+        "issues": "https://github.com/Filix/sms_queue/issues"
+    },
+    "require": {
+        "php": ">=5.3.2"
+    },
+    "suggest": {
+
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        }
+    },
+    "autoload": {
+        
+    },
+    "target-dir": "Filix/SMS"
+}

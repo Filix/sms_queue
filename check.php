@@ -11,11 +11,12 @@ use Filix\SMS\SmsService\BWService;
 $service = new BWService();
 while(1){
     $message = new Message();
-    $message->setMobiles(array('13764528569'));
+    $message->setMobiles(array(ADMIN_MOBILE));
     $content = mb_convert_encoding('百悟SMS服务监测短信，send at: ' . date('Y-m-d H:i:s'), "gbk", "utf-8");
     $message->setContent($content);
     $errors = $service->send(array($message));
-    unset($message);
     echo (count($errors) ? "fail at: " : "success at: ") . date('Y-m-d H:i:s') . "\n";
+    unset($message);
+    unset($errors);
     sleep(60 * 60); //一小时发一次
 }
