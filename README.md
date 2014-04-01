@@ -62,5 +62,6 @@ $customer = new PrimaryCustomer($service, $primaryQueue, $secondaryQueue);
 
 while(1){
     $result = $customer->fetchAndSend(3); //一次获取3条消息，并发地向服务商接口发送
+    sleep(1);
 }
 ```
